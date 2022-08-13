@@ -1,10 +1,9 @@
 <template lang="pug">
 // a vue component wrapper for Lifehash icons <https://github.com/BlockchainCommons/lifehash.info>
-img(:src="icon" :alt="input" )
+img(:src="icon" :alt="input")
 </template>
-
 <script setup>
-import {ref, onMounted, computed} from "vue";
+import { ref, defineProps, onMounted, computed } from "vue";
 import instantiate_lifehash from './lifehash.js';
 
 // take a string as the input for the generator

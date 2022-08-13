@@ -7,6 +7,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import LifeHash from '../../dist/lifehash-vue.js';
+import LifeHash from 'lifehash-vue';
 const input = ref('Hello World!');
 </script>
