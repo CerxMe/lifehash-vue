@@ -20,7 +20,7 @@ The default export is a Vue component that can be used in a Vue template.
 import LifeHash from 'lifehash-vue';
 </script>
 ```
-See the demo directory for working example.
+See the demo directory for a [working live example](https://leafy-raindrop-966db2.netlify.app).
 
 ### Props
 Following props are available:
