@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [vue()],
     build: {
         lib: {
+            // export the vue component
             entry: resolve('src/main.js'),
             name: 'LifeHash-Vue',
             // the proper extensions will be added

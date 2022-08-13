@@ -1,10 +1,10 @@
 <template lang="pug">
 // a vue component wrapper for Lifehash icons <https://github.com/BlockchainCommons/lifehash.info>
-img(:src="icon" :alt="input")
+img(:src="icon" :alt="input" )
 </template>
 
 <script setup>
-import {ref, onMounted} from "vue";
+import {ref, onMounted, computed} from "vue";
 import instantiate_lifehash from './lifehash.js';
 
 // take a string as the input for the generator
@@ -18,17 +18,23 @@ const props = defineProps({
   }
 })
 
-const icon = ref(null);
+const icon = computed(() => {
+  if(!!lifehash.value) {
+    let result = lifehash.value.makeFromUTF8(props.input, props.version, 6);
+    return result.src
+  }
+})
+const lifehash = ref(null);
 
-// run lifehash generator and return rendered image
-const renderIcon = async () => {
-  const lifehash = await instantiate_lifehash();
-  // render the image
-  let result = lifehash.makeFromUTF8(props.input, props.version, 6);
-  icon.value = result.src
-}
+// // run lifehash generator and return rendered image
+// const renderIcon = async () => {
+//
+//   // render the image
+//   let result = lifehash.makeFromUTF8(props.input, props.version, 6);
+//   icon.value = result.src
+// }
 // async render
-onMounted(() => {
-  renderIcon();
+onMounted(async () => {
+  lifehash.value = await instantiate_lifehash();
 })
 </script>

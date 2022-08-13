@@ -1,20 +1,20 @@
 {
   "name": "lifehash-vue",
-  "description": "Vue.js plugin for lifehash identicons",
-  "version": "0.1.0",
-  "repository": "  https://github.com/CerxMe/lifehash-vue",
+  "description": "Vue.js plugin for LifeHash identicons",
+  "version": "0.1.1",
+  "repository": "https://github.com/CerxMe/lifehash-vue",
   "private": false,
   "type": "module",
-  "files": ["dist/*"],
-  "main" : ".dist/lifehash-vue.js",
+  "main": ".dist/lifehash-vue.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "devDependencies": {
-    "vite": "^3.0.0",
-    "vue": "^3.2.37",
     "@vitejs/plugin-vue": "^3.0.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "stylus": "^0.59.0",
+    "vite": "^3.0.0",
+    "vue": "^3.2.37"
   }
 }
