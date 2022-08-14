@@ -33,6 +33,7 @@ Following props are available:
 ### Global registration (in main.js)
 ```js
 import { createApp } from 'vue'
+import App from './App.vue'
 import LifeHash from 'lifehash-vue';
 
 createApp(App)
