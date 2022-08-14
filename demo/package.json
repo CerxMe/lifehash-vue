@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lifehash-vue": "^0.1.3",
+    "lifehash-vue": "^0.1.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {
