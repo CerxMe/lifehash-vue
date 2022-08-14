@@ -30,9 +30,6 @@ Following props are available:
 | input | String | The input string to hash |
 | version | Number | The version of LifeHash to use (Default: 1) |
 
-### Live Example
-See the demo directory for a working example implementation.
-
 ## Example results
 | Version | Description           | Samples                                |
 |---------|-----------------------|---------------------------------------|
