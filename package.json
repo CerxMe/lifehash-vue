@@ -5,16 +5,33 @@
   "repository": "https://github.com/CerxMe/lifehash-vue",
   "private": false,
   "type": "module",
-  "main": "./dist/lifehash-vue.js",
+  "main": "./dist/lifehash-vue.umd.cjs",
+  "module": "./dist/lifehash-vue.js",
+  "typings": "./dist/lifehash.vue.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lifehash-vue.js",
+      "require": "./dist/lifehash-vue.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.0",
+    "@types/node": "^18.7.13",
+    "@vitejs/plugin-vue": "^3.0.3",
     "pug": "^3.0.2",
     "stylus": "^0.59.0",
-    "vite": "^3.0.0",
-    "vue": "^3.2.37"
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7",
+    "vue-tsc": "^0.39.5"
   }
 }
