@@ -1,7 +1,7 @@
 {
   "name": "lifehash-vue",
   "description": "Vue.js plugin for LifeHash identicons",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": "https://github.com/CerxMe/lifehash-vue",
   "private": false,
   "type": "module",
